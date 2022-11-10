@@ -1,0 +1,19 @@
+<h2>Admin Login</h2>
+<%= flash[:notice] %>
+
+<%= form_with(url: "/admin/login")  do |form| %>
+
+    <div class="field">
+    <%= form.label :user_name %>
+    <%= form.text_field :user_name %>
+    
+  </div>
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Login" %>
+  </div>
+<% end %>
